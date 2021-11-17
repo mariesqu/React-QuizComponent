@@ -1,0 +1,26 @@
+import React, {Component} from 'react'
+import Quiz from "./Quiz";
+
+class QuizQuestion extends Component {
+    render() {
+        return (
+            <main>
+                <section>
+                    <p>{this.props.quiz_question.instruction_text}</p>
+                </section>
+                <section className="buttons">
+                    <ul>
+                        <li>{this.props.quiz_question.answer_options[0]}</li>
+                    </ul>
+                </section>
+            </main>
+        )
+    }
+
+    constructor(props) {
+        super(props);
+        this.state = {quiz_position: 1}
+    }
+}
+
+export default QuizQuestion
